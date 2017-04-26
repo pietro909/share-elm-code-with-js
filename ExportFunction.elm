@@ -1,4 +1,4 @@
-module ExportFunction exposing (functionToString, functionToString2)
+module ExportFunction exposing (..)
 
 -- imports are weird for Native modules
 -- You import them as you would normal modules
@@ -11,3 +11,12 @@ functionToString = Native.ExportFunction.functionToString
 
 functionToString2 : (Float -> String) -> String
 functionToString2 = Native.ExportFunction.functionToString
+
+functionToStringWithId : String -> (AType -> String) -> String
+functionToStringWithId = Native.ExportFunction.functionToStringWithId
+
+
+type AType
+  = Hey
+  | Ho
+  | LetsGo

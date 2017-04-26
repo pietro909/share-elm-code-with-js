@@ -1,13 +1,20 @@
 var _user$project$Native_ExportFunction = function(){
 
-        window.$functions = []
-    // expose your functions here
-    return {
-      functionToString: function functionToString(fn) {
-        console.log('functionToString')
-        window.$functions.push(fn)
+  window._ExportFunction_exports = {};
+  var exports = window._ExportFunction_exports;
+
+  return {
+    functionToString: function functionToString(fn) {
+      var id = Object.keys(exports).length.toString();
+      exports[id] = fn;
+      return fn.toString();
+    },
+    functionToStringWithId: function functionToString(id) {
+      return function(fn) {
+        exports[id] = fn;
         return fn.toString();
       }
-    };
+    }
+  };
 }();
 
