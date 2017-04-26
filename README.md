@@ -33,3 +33,7 @@ add a b =
 It won't work, since a function is not serializable by ports.
 
 TODO: finish this README, now I'm in a hurry!
+
+This is the POC, btw:
+
+<a class="jsbin-embed" href="http://jsbin.com/pedateg/embed?js,console">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.41.10"></script>
